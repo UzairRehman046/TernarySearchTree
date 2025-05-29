@@ -50,3 +50,9 @@ class TernarySearchTree:
             if index == len(word) - 1:
                 return node.is_end if exact else True
             return self._search(node.eq, word, index + 1, exact)
+        
+    def __len__(self):
+        count = self._count_words(self.root)
+        if self.has_empty:
+            count += 1
+        return count
