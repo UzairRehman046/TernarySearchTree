@@ -73,3 +73,12 @@ class TernarySearchTree:
             result.append("")  
         self._collect_words(self.root, "", result)
         return result
+    
+    def _collect_words(self, node, prefix, result):
+        if node is None:
+            return
+        self._collect_words(node.left, prefix, result)
+        if node.is_end:
+            result.append(prefix + node.char)
+        self._collect_words(node.eq, prefix + node.char, result)
+        self._collect_words(node.right, prefix, result)
