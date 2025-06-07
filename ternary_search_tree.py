@@ -82,3 +82,10 @@ class TernarySearchTree:
             result.append(prefix + node.char)
         self._collect_words(node.eq, prefix + node.char, result)
         self._collect_words(node.right, prefix, result)
+
+        def __str__(self):
+             lines = []
+        if self.has_empty:
+            lines.append("char: '', terminates: True (empty string)")
+        self._collect_str(self.root, prefix="", is_eq=True, lines=lines)
+        return "\n".join(lines)
