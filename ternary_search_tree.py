@@ -56,3 +56,36 @@ class TernarySearchTree:
         if self.has_empty:
             count += 1
         return count
+
+    def _count_words(self, node): 
+        if node is None:
+            return 0
+        count = self._count_words(node.left)
+        count += self._count_words(node.eq)
+        count += self._count_words(node.right)
+        if node.is_end:
+            count += 1
+        return count
+
+    def all_strings(self):
+        result = []
+        if self.has_empty:
+            result.append("")  
+        self._collect_words(self.root, "", result)
+        return result
+    
+    def _collect_words(self, node, prefix, result):
+        if node is None:
+            return
+        self._collect_words(node.left, prefix, result)
+        if node.is_end:
+            result.append(prefix + node.char)
+        self._collect_words(node.eq, prefix + node.char, result)
+        self._collect_words(node.right, prefix, result)
+
+    def __str__(self):
+        lines = []
+        if self.has_empty:
+            lines.append("char: '', terminates: True (empty string)")
+        self._collect_str(self.root, prefix="", is_eq=True, lines=lines)
+        return "\n".join(lines)
