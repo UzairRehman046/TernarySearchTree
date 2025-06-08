@@ -9,8 +9,8 @@ class TSTNode:
 
 class TernarySearchTree:
     def __init__(self):
-        self.root = None
-        
+        self.root = None       
+
     def insert(self, word):
         if not word:
             return
@@ -31,7 +31,7 @@ class TernarySearchTree:
             else:
                 node.is_end = True
         return node
- 
+
     def search(self, word, exact=False):
         if word == "":
             return True if not exact else self.has_empty
@@ -50,7 +50,7 @@ class TernarySearchTree:
             if index == len(word) - 1:
                 return node.is_end if exact else True
             return self._search(node.eq, word, index + 1, exact)
-        
+
     def __len__(self):
         count = self._count_words(self.root)
         if self.has_empty:
