@@ -7,12 +7,15 @@ class TSTNode:
         self.is_end = False
 
 
+
 class TernarySearchTree:
     def __init__(self):
-        self.root = None       
+        self.root = None
+        self.has_empty = False   
 
     def insert(self, word):
         if not word:
+            self.has_empty = False
             return
         self.root = self._insert(self.root, word, 0)
 
