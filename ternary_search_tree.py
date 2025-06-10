@@ -89,3 +89,16 @@ class TernarySearchTree:
             lines.append("char: '', terminates: True (empty string)")
         self._collect_str(self.root, prefix="", is_eq=True, lines=lines)
         return "\n".join(lines)
+    
+    def _collect_str(self, node, prefix, is_eq, lines):
+        if node is None:
+            return
+        label = f"{prefix}char: {node.char}, terminates: {node.is_end}"
+        lines.append(label)
+        if node.left:
+            self._collect_str(node.left, prefix + "L-> ", False, lines)
+        if node.eq:
+            self._collect_str(node.eq, prefix + "E-> ", True, lines)
+        if node.right:
+            self._collect_str(node.right, prefix + "R-> ", False, lines)
+
