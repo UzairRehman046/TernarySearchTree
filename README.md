@@ -25,3 +25,35 @@ ternary-search-tree-project/
 ├── main_job.slurm              # SLURM job script for HPC execution
 └── README.md                   # This file
 ```
+
+---
+
+##  Features
+
+###  Insertion & Search
+
+```python
+tst.insert("apple")
+tst.search("app")              # True (prefix)
+tst.search("app", exact=True) # False
+```
+
+###  Empty String Support
+
+- `search("")` returns `True` as it's a prefix of every string.
+- `search("", exact=True)` returns `True` only if explicitly inserted.
+
+###  Word Count & Listing
+
+```python
+len(tst)            # Total words inserted
+tst.all_strings()   # List all inserted words
+```
+
+###  Visual Tree Output
+
+```python
+print(tst)
+```
+
+---
