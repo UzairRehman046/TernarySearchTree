@@ -12,3 +12,16 @@ Code benchmarking with performance plots
 HPC execution via SLURM on KU Leuven Genius cluster
 
 ---
+
+##  Project Structure
+
+```
+ternary-search-tree-project/
+│
+├── ternary_search_tree.py      # Main class implementation
+├── benchmark_tst.py            # Benchmarking and performance evaluation script
+├── data/search_trees/corncob_lowercase.txt       # Word list used for testing
+├── benchmark_plot.png          # Saved plot of benchmark results
+├── main_job.slurm              # SLURM job script for HPC execution
+└── README.md                   # This file
+```
