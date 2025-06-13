@@ -128,3 +128,10 @@ Muhammad Uzair Rehman
 ##  License
 
 This project is developed for educational purposes. You may adapt and reuse the code for your own learning or assignments (with attribution).
+
+## PS
+P.s: You may notice that the commit history lists three contributors instead of two. This was due to a Git configuration issue. Our group member, Hafiz Fahad, initially tried to push the first commit using a new GitHub account linked to his university email. However, he ran into some issues and switched back to his personal GitHub account for the rest of the work. 
+
+As a result, GitHub recorded his contributions under two different IDs, even though both belong to the same person and the total number of contributors is actually 2. 
+
+Apologies for the confusion!
