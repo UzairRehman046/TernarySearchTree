@@ -70,6 +70,12 @@ This will:
 - Display a summary table in the terminal
 - Generate and save a performance plot as `benchmark_plot.png`
 
+###  Performance Plot
+
+The following chart shows insertion and search times for increasing input sizes:
+
+![Benchmark Plot](benchmark_plot.png)
+
 ---
 
 ##  HPC Execution (KU Leuven Genius Cluster)
