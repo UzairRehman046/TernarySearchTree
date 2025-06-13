@@ -88,3 +88,43 @@ This project was successfully executed on KU Leuven's Tier-2 HPC (Wice cluster) 
 module load cluster/genius/amd
 module load matplotlib/3.1.1-foss-2019b-Python-3.7.4
 ```
+
+###  SLURM Job Script (`main_job.slurm`)
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=TST_BENCHMARK
+#SBATCH --output=benchmark_output.txt
+#SBATCH --time=00:05:00
+#SBATCH --mem=2G
+
+module load cluster/genius/amd
+module load matplotlib/3.1.1-foss-2019b-Python-3.7.4
+
+python benchmark_tst.py
+```
+
+###  Submit Job
+
+```bash
+sbatch main_job.slurm
+```
+
+###  Output Files
+
+- `benchmark_plot.png`: Visual chart of insert/search timings
+- `benchmark_output.txt`: Console logs from the job
+- SLURM files: `.out` and `.err` for system diagnostics
+
+---
+
+##  Group Members
+
+Hafiz Muhammad Fahad  
+Muhammad Uzair Rehman
+
+---
+
+##  License
+
+This project is developed for educational purposes. You may adapt and reuse the code for your own learning or assignments (with attribution).
