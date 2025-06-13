@@ -57,3 +57,28 @@ print(tst)
 ```
 
 ---
+##  Benchmarking
+
+To measure the performance of the TST implementation, run:
+
+```bash
+python benchmark_tst.py
+```
+
+This will:
+- Benchmark insertion and search time for varying input sizes
+- Display a summary table in the terminal
+- Generate and save a performance plot as `benchmark_plot.png`
+
+---
+
+##  HPC Execution (KU Leuven Genius Cluster)
+
+This project was successfully executed on KU Leuven's Tier-2 HPC (Wice cluster) using the OnDemand platform.
+
+###  Required Modules
+
+```bash
+module load cluster/genius/amd
+module load matplotlib/3.1.1-foss-2019b-Python-3.7.4
+```
