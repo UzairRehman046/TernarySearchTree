@@ -1,0 +1,22 @@
+SLURM_JOB_ID: 64547253
+SLURM_JOB_USER: vsc37652
+SLURM_JOB_ACCOUNT: lp_h_ds_students
+SLURM_JOB_NAME: default_cpu_job
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: batch
+SLURM_NNODES: 1
+SLURM_NODELIST: r33c22n4
+SLURM_JOB_CPUS_PER_NODE: 1
+Date: Mon May 26 03:21:23 CEST 2025
+Walltime: 00-01:00:00
+========================================================================
+ Starting Benchmark Script...
+   Words |   Insert (s) |   Search (s)
+-------------------------------------
+     100 |       0.0010 |       0.0004
+     750 |       0.0051 |       0.0038
+    1500 |       0.0114 |       0.0055
+    3000 |       0.0269 |       0.0068
+    6000 |       0.0582 |       0.0067
+   12000 |       0.1100 |       0.0075
+# Plot saved as 'benchmark_plot.png'
